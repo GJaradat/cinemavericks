@@ -102,13 +102,11 @@ public class MovieListService {
 
     //EXTENSION:
     // Setting Movie List privacy settings
-
     public void setMovieListVisibility(Long movieListId, Boolean isPublic){
         MovieList targetMovieList = movieListRepository.findById(movieListId).get();
         targetMovieList.setPublic(isPublic);
         movieListRepository.save(targetMovieList);
 
-}
-
+    }
 
 }
